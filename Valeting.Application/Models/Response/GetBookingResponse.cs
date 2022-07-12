@@ -9,10 +9,13 @@ namespace Valeting.Application.Models.Response
         public GetCustomerResponse Customer { get; set; }
 
         public DateTime BookingDate { get; set; }
+        public string BookingDateFormat { get; set; }
 
         public BookingFlexibilityEnum Flexibility { get; set; }
+        public string FlexibilityDescription { get; set; }
 
         public VehicleSizeEnum VehicleSize { get; set; }
+        public string VehicleSizeDescription { get; set; }
 
         public bool IsApproved { get; set; }
     }

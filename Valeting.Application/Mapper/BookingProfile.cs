@@ -8,7 +8,11 @@ namespace Valeting.Application.Mapper
     {
         public BookingProfile()
         {
-            CreateMap<Booking, GetBookingResponse>();
+            CreateMap<Booking, GetBookingResponse>()
+                .ForMember(x => x.FlexibilityDescription, opt => opt.MapFrom(p => p.Flexibility.ToString()))
+                .ForMember(x => x.VehicleSizeDescription, opt => opt.MapFrom(p => p.VehicleSize.ToString()))
+                .ForMember(x => x.BookingDateFormat, opt => opt.MapFrom(p => p.BookingDate.ToString("MM/dd/yyyy")));
+
             CreateMap<GetBookingResponse, Booking>();
         }
     }
