@@ -14,9 +14,9 @@ namespace Valeting.Application.Services
         private readonly ICustomerAppService _customerAppService;
         private readonly IMapper _mapper;
 
-        public BookingAppService(IBookingRepository bookingRepository,
-                                ICustomerRepository customerRepository,
-                                ICustomerAppService customerAppService,
+        public BookingAppService(IBookingRepository bookingRepository, 
+                                ICustomerRepository customerRepository, 
+                                ICustomerAppService customerAppService, 
                                 IMapper mapper)
         {
             _bookingRepository = bookingRepository;
@@ -36,10 +36,13 @@ namespace Valeting.Application.Services
         {
             var customerDb = await _customerRepository.GetByEmail(booking.Customer.Email);
 
-            customerDb.Update(booking.Customer.Name, booking.Customer.Phone);
-            booking.SetCustomer(customerDb);
+            if (customerDb is not null)
+            {
+                customerDb.Update(booking.Customer.Name, booking.Customer.Phone);
+                booking.SetCustomer(customerDb);
 
-            await _customerAppService.Update(customerDb);
+                await _customerAppService.Update(customerDb);
+            }
 
             var response = await _bookingRepository.Create(booking);
             return _mapper.Map<GetBookingResponse>(response);
