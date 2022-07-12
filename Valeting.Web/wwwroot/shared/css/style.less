@@ -1,0 +1,238 @@
+﻿@import "Utility";
+
+@corErro: rgb(244, 67, 54);
+
+//Label de erro do jQuery Validation
+label[id*="-error"].error {
+    color: @corErro !important;
+    font-size: 14px;
+}
+
+//Add border-color no elemento que está com erro do jQuery Validation
+*.error {
+    border-color: @corErro !important;
+}
+
+//DatePicker
+.datepicker {
+    &.dropdown-menu {
+        font-size: 12px;
+    }
+}
+
+//Elemento disabled
+*:disabled, .disabled {
+    cursor: not-allowed !important;
+}
+
+@arrowColor: #727272;
+@arrow: escape('@{arrowColor}');
+
+select.form-control {
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20448%22%20enable-background%3D%22new%200%200%20256%20448%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.arrow%7Bfill%3A@{arrow}%3B%7D%3C%2Fstyle%3E%3Cpath%20class%3D%22arrow%22%20d%3D%22M255.9%20168c0-4.2-1.6-7.9-4.8-11.2-3.2-3.2-6.9-4.8-11.2-4.8H16c-4.2%200-7.9%201.6-11.2%204.8S0%20163.8%200%20168c0%204.4%201.6%208.2%204.8%2011.4l112%20112c3.1%203.1%206.8%204.6%2011.2%204.6%204.4%200%208.2-1.5%2011.4-4.6l112-112c3-3.2%204.5-7%204.5-11.4z%22%2F%3E%3C%2Fsvg%3E%0A");
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    background-size: auto 50%;
+    outline: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+
+    &::-ms-expand {
+        display: none;
+    }
+}
+
+.form-control {
+    box-shadow: none;
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+// Inicio CSS Tabela DataTable
+.tabela-datatable {
+    -webkit-box-shadow: 1px 2px 3px 1px rgba(0,0,0,.15);
+    -moz-box-shadow: 1px 2px 3px 1px rgba(0,0,0,.15);
+    box-shadow: 1px 2px 3px 1px rgba(0,0,0,.15);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px 0;
+
+    .table-responsive {
+        border: none;
+    }
+    // cor icone expandir do tatable
+    .table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child:before,
+    .table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child:before {
+        background-color: #2BB5AB;
+    }
+    // cor icone diminuir  do tatable
+    .table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before,
+    .table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before {
+        background-color: #ED993C;
+    }
+
+    .dataTables_paginate {
+        font-size: 13px;
+    }
+
+    .dataTables_length {
+        @media @media-mobile {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        select {
+            border-radius: 0 !important;
+            padding: 2px;
+            border: 1px solid #ddd;
+            box-shadow: none;
+        }
+    }
+
+    .dataTables_filter {
+        input {
+            border-radius: 5px !important;
+            border: 1px solid #ddd;
+            box-shadow: none;
+        }
+    }
+
+
+    table {
+        border-collapse: inherit;
+        border-spacing: 2px;
+        margin-bottom: 0;
+        border: none;
+        padding: 10px 0;
+
+        &.no-footer {
+            border-bottom: none !important;
+        }
+
+        thead {
+            th {
+                border: none;
+                font-size: 12px;
+                font-weight: 700;
+                color: #878787;
+                text-align: left;
+                vertical-align: middle;
+                //white-space: nowrap;
+                text-transform: uppercase;
+
+                &.acao {
+                    text-align: center;
+                    width: 10% !important;
+                }
+            }
+        }
+
+        tbody {
+            td {
+                background-color: #F5F5F5;
+                border: none;
+                text-align: center;
+                vertical-align: middle;
+                font-size: 13px;
+                font-weight: 400;
+                color: #878787;
+                border-radius: 5px;
+
+                &.child {
+                    padding: 0;
+                    background-color: #ffffff;
+
+                    ul {
+                        width: 100%;
+
+                        li {
+                            border: 1px solid #F0F0F0;
+                            border-bottom: none;
+                            padding: 0.5em 0 !important;
+
+                            .dtr-title {
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+                }
+
+                &.tabela-acoes {
+                    padding: 0;
+
+                    .btn-editar {
+                        color: #989898;
+
+                        &:before {
+                            font-family: "Font Awesome 5 Free";
+                            content: "\f303";
+                            display: inline-block;
+                            padding-right: 3px;
+                            vertical-align: middle;
+                            font-weight: 900;
+                        }
+                    }
+
+                    .btn-excluir {
+                        color: #c90000;
+
+                        &:before {
+                            font-family: "Font Awesome 5 Free";
+                            content: "\f1f8";
+                            display: inline-block;
+                            padding-right: 3px;
+                            vertical-align: middle;
+                            font-weight: 900;
+                        }
+                    }
+
+                    .btn-acao {
+                        padding: 8px;
+                        font-size: 12px;
+                        font-weight: 500;
+                        text-align: center;
+                        background-color: transparent;
+
+                        &:focus {
+                            box-shadow: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Fim CSS Tabela DataTable
+
+// Inicio Efeito Botao Espelho
+.btn-espelho {
+    position: relative;
+    text-decoration: none;
+    transition: background 0.5s ease;
+    overflow: hidden;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+
+    &:before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 100px;
+        background: #fff;
+        bottom: -25px;
+        left: 0;
+        border: 2px solid #fff;
+        transform: translateX(-50px) rotate( 45deg );
+        transition: transform 0.5s ease;
+    }
+
+    &:hover {
+        border-color: #fff;
+        //background: transparent;
+        &:before {
+            transform: translateX(250px) rotate( 45deg );
+        }
+    }
+}
+// Fim Botao Espelho

@@ -1,0 +1,22 @@
+﻿[
+  {
+    "outputFile": "wwwroot/admin/css/layout/layout.css",
+    "inputFile": "wwwroot/admin/css/layout/layout.less"
+  },
+  {
+    "outputFile": "wwwroot/admin/css/layout/Layout_LoggedOut.css",
+    "inputFile": "wwwroot/admin/css/layout/Layout_LoggedOut.less"
+  },
+  {
+    "outputFile": "wwwroot/client/css/layout/layout.css",
+    "inputFile": "wwwroot/client/css/layout/layout.less"
+  },
+  {
+    "outputFile": "wwwroot/shared/css/style.css",
+    "inputFile": "wwwroot/shared/css/style.less"
+  },
+  {
+    "outputFile": "wwwroot/shared/css/utility.css",
+    "inputFile": "wwwroot/shared/css/utility.less"
+  }
+]

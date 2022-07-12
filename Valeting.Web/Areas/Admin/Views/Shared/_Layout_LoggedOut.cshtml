@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>@ViewData["Title"] - Valeting.Web</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="~/lib/Bootstrap_4.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/JqueryUI-1.12.1/css/jquery-ui.min.css" />
+
+    <link rel="stylesheet" href="~/lib/Animate/css/animate.min.css" />
+    <link rel="stylesheet" href="~/lib/SweetAlert2-9.15.1/css/sweetalert2.min.css" />
+
+    <link rel="stylesheet" href="~/shared/css/Utility.min.css" />
+    <link rel="stylesheet" href="~/shared/css/style.min.css" />
+
+    <link rel="stylesheet" href="~/admin/css/layout/Layout_LoggedOut.min.css" />
+</head>
+
+<body>
+    <header>
+    </header>
+
+    <main class="animated fadeInDown">
+        <div class="container">
+            @RenderBody()
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="box-footer">
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        var Master_Vars = {
+            baseUrl: '@Href("~/")'
+        };
+    </script>
+
+    <!-- Plugins JS -->
+    <script src="~/lib/JQuery_3.5.1/js/jquery-3.5.1.min.js"></script>
+    <script src="~/lib/JQueryUI-1.12.1/js/jquery-ui.min.js"></script>
+    <script src="~/lib/Popper/js/popper.min.js"></script>
+    <script src="~/lib/Bootstrap_4.4.1/js/bootstrap.min.js"></script>
+
+    <script src="~/lib/BlockUI/js/jquery.blockUI.js"></script>
+    <script src="~/lib/JQueryInputMask/js/jquery.inputmask.min.js"></script>
+    <script src="~/lib/JQueryValidation_1.19.2/js/jquery.validate.min.js"></script>
+    <script src="~/lib/JQueryValidation_1.19.2/js/additional-methods.min.js"></script>
+    <script src="~/lib/SweetAlert2-9.15.1/js/sweetalert2.all.min.js"></script>
+
+    <script src="~/shared/js/utility.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

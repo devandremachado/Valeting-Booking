@@ -1,0 +1,32 @@
+﻿@media-xl: ~"(min-width: 1200px)";
+@media-lg: ~"(max-width: 1199px)";
+@media-md: ~"(max-width: 991px)";
+@media-sm: ~"(max-width: 767px)";
+@media-xs: ~"(max-width: 575px)";
+@media-desktop: ~"(min-width: 768px)";
+@media-desktop-extended: ~"(min-width: 576px)";
+@media-mobile: ~"(max-width: 767px)";
+
+.border-radius(@tamanho: 15px) {
+    -webkit-border-radius: @tamanho;
+    -moz-border-radius: @tamanho;
+    border-radius: @tamanho;
+}
+
+.background-color-effect(@cor) {
+    background-color: @cor;
+
+    &:hover {
+        background-color: lighten(@cor, 5%);
+    }
+
+    &:active {
+        background-color: darken(@cor, 5%);
+    }
+}
+
+@candidato-cor-fonte-primario: #707070;
+@candidato-cor-tema: #26749c;
+
+@admin-cor-fonte-primario: #707070;
+@admin-cor-tema: #00b3b3;

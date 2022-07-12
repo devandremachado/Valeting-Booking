@@ -11,6 +11,9 @@ builder.Services.AddDbContext<BookingContext>(opt => {
 });
 
 builder.Services.ResolveRepositoryDependencies();
+builder.Services.ResolveAppServiceDependencies();
+
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();
 
@@ -26,6 +29,10 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.MapControllerRoute(
+    name: "Admin",
+    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
 
 app.MapControllerRoute(
     name: "default",
