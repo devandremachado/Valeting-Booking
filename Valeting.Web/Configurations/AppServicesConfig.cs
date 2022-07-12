@@ -8,6 +8,7 @@ namespace Valeting.Web.Configurations
         public static IServiceCollection ResolveAppServiceDependencies(this IServiceCollection services)
         {
             services.AddScoped<ICustomerAppService, CustomerAppService>();
+            services.AddScoped<IBookingAppService, BookingAppService>();
 
             return services;
         }
