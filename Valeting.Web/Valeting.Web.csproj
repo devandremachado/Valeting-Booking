@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Valeting.Application\Valeting.Application.csproj" />
     <ProjectReference Include="..\Valeting.Infra.Data\Valeting.Infra.Data.csproj" />
   </ItemGroup>
 
