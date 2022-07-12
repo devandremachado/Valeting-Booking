@@ -1,16 +1,18 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
-using Valeting.Web.Models;
+using Valeting.Application.Services.Interfaces;
+using Valeting.Web.DTO.Request;
 
 namespace Valeting.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly IBookingAppService _bookingAppService;
+        private readonly ICustomerAppService _customerAppService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IBookingAppService bookingAppService, ICustomerAppService customerAppService)
         {
-            _logger = logger;
+            _bookingAppService = bookingAppService;
+            _customerAppService = customerAppService;
         }
 
         public IActionResult Index()
@@ -18,15 +20,23 @@ namespace Valeting.Web.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        [HttpPost]
+        public async Task<JsonResult> CreateBooking(CreateBookingRequestDto request)
         {
-            return View();
+            if (!ModelState.IsValid)
+                return Json(new { IsSucess = false }); // TODO
+
+            var booking = request.ToEntity();
+
+            var response = await _bookingAppService.Create(booking);
+            return Json(response);
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        [HttpGet]
+        public async Task<JsonResult> GetCustomerByEmail(string email)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            var customer = await _customerAppService.GetByEmail(email);
+            return Json(customer);
         }
     }
 }
