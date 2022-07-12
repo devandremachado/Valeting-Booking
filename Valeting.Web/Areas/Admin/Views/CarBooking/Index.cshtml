@@ -1,8 +1,4 @@
-﻿@{
-    ViewData["Title"] = "Home Admin";
-}
-
-<link href="~/client/css/home/index.min.css" rel="stylesheet" />
+﻿<link href="~/admin/css/car-booking/index.min.css" rel="stylesheet" />
 
 <div id="Cadastro">
     <div class="container">
@@ -17,20 +13,8 @@
 
                     <div class="form-row">
                         <div class="form-group col-md-12">
-                            <label for="txtEmail">Email*</label>
-                            <input type="email" class="form-control" id="txtEmail" name="txtEmail">
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group col-sm-12 col-md-12 col-lg-6">
                             <label for="txtName">Name*</label>
                             <input type="text" class="form-control" id="txtName" name="txtName">
-                        </div>
-
-                        <div class="form-group col-sm-12 col-md-12 col-lg-6">
-                            <label for="txtPhone">Phone*</label>
-                            <input type="text" class="form-control" id="txtPhone" name="txtPhone">
                         </div>
                     </div>
 
@@ -62,10 +46,22 @@
                         </div>
                     </div>
 
+                    <div class="form-row">
+                        <div class="form-group col-sm-12 col-md-12 col-lg-6">
+                            <label for="txtContactNumber">Contact Number*</label>
+                            <input type="text" class="form-control" id="txtContactNumber" name="txtContactNumber">
+                        </div>
+
+                        <div class="form-group col-sm-12 col-md-12 col-lg-6">
+                            <label for="txtEmail">Email Address*</label>
+                            <input type="email" class="form-control" id="txtEmail" name="txtEmail">
+                        </div>
+                    </div>
+
                     <div class="box-acoes">
                         <div class="btn-acoes">
                             <div class="entrar">
-                                <button type="button" id="btnSalvar" class="btn-entrar btn btn-espelho btn-primary">Register</button>
+                                <button type="button" id="btnSalvar" class="btn-entrar btn btn-primary">Register</button>
                             </div>
 
                         </div>
@@ -80,12 +76,5 @@
 </div>
 
 @section Scripts{
-<script type="text/javascript" src="~/client/js/home/index.js"></script>
-
-<script type="text/javascript">
-    var Booking_Actions = {
-        'CreateBooking': "@Url.Action("CreateBooking", "Home")",
-        'GetCustomerByEmail': "@Url.Action("GetCustomerByEmail", "Home")"
-    };
-</script>
+<script type="text/javascript" src="~/admin/js/car-booking/index.js"></script>
 }

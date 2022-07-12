@@ -18,5 +18,21 @@
   {
     "outputFile": "wwwroot/shared/css/utility.css",
     "inputFile": "wwwroot/shared/css/utility.less"
+  },
+  {
+    "outputFile": "wwwroot/admin/css/car-booking/index.css",
+    "inputFile": "wwwroot/admin/css/car-booking/index.less"
+  },
+  {
+    "outputFile": "wwwroot/admin/css/home/index.css",
+    "inputFile": "wwwroot/admin/css/home/index.less"
+  },
+  {
+    "outputFile": "wwwroot/admin/css/login/index.css",
+    "inputFile": "wwwroot/admin/css/login/index.less"
+  },
+  {
+    "outputFile": "wwwroot/client/css/home/index.css",
+    "inputFile": "wwwroot/client/css/home/index.less"
   }
 ]

@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Login Admin";
+    Layout = "_Layout_LoggedOut";
+}
+<link href="~/admin/css/login/index.min.css" rel="stylesheet" />
+
+<div id="Login">
+    <div class="container">
+        <div class="box-card">
+
+            <div class="conteudo">
+                <form id="formLogin">
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="txtUsuario">E-mail</label>
+                            <input type="text" class="form-control" id="txtUsuario" name="txtUsuario">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="txtSenha">Password</label>
+                            <input type="password" class="form-control" id="txtSenha" name="txtSenha">
+                        </div>
+                    </div>
+                </form>
+
+                <div class="box-acoes">
+                    <div class="entrar">
+                        <button type="button" id="btnLogar" class="btn-entrar btn btn-primary">Continue</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+<script type="text/javascript">
+    document.getElementById("btnLogar").onclick = function () {
+        location.href = "@Href("~/Admin/Home")"
+    };
+</script>
+}

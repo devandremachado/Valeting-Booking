@@ -10,7 +10,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Areas\Admin\Views\CarBooking\Index.cshtml" />
+    <None Include="Areas\Admin\Views\Home\Index.cshtml" />
+    <None Include="Areas\Admin\Views\Login\Index.cshtml" />
+    <None Include="Areas\Admin\Views\Shared\Error.cshtml" />
+    <None Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <None Include="Areas\Admin\Views\Shared\_Layout_LoggedOut.cshtml" />
     <None Include="compilerconfig.json" />
+    <None Include="wwwroot\admin\css\car-booking\index.less" />
+    <None Include="wwwroot\admin\css\home\index.less" />
+    <None Include="wwwroot\admin\css\login\index.less" />
+    <None Include="wwwroot\client\css\home\index.less" />
   </ItemGroup>
 
   <ItemGroup>

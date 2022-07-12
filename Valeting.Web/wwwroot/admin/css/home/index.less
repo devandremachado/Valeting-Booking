@@ -1,0 +1,109 @@
+﻿@import "../../../shared/css/utility.less";
+
+#Home {
+    .tblBookings {
+        thead {
+            tr {
+                th {
+                    white-space: pre-wrap;
+                }
+            }
+        }
+
+        tbody {
+            td {
+                &.approved {
+                    background: #13d641;
+                    color: #fff !important;
+                }
+
+                .btn-ver {
+                    padding: 0;
+
+                    &:before {
+                        margin-left: 5px;
+                        font-family: "Font Awesome 5 Free";
+                        content: "\f06e";
+                        display: inline-block;
+                        vertical-align: middle;
+                        font-weight: 900;
+                        color: #989898;
+                        text-align: center;
+                        background-color: transparent;
+                        font-size: 12px;
+                    }
+
+                    &:hover {
+                        &:before {
+                            color: @admin-cor-tema;
+                        }
+                    }
+
+                    &:focus {
+                        box-shadow: none;
+                    }
+                }
+
+                &.tabela-acoes {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+
+                    .btn-aprovar {
+                        &:before {
+                            font-family: "Font Awesome 5 Free";
+                            content: "\f560";
+                            display: inline-block;
+                            padding-right: 3px;
+                            vertical-align: middle;
+                            font-weight: 900;
+                            color: #989898;
+                        }
+
+                        &:hover {
+                            &:before {
+                                color: #5cb300;
+                            }
+                        }
+                    }
+
+                    .btn-reprovar {
+                        &:before {
+                            font-family: "Font Awesome 5 Free";
+                            content: "\f1f8";
+                            display: inline-block;
+                            padding-right: 3px;
+                            vertical-align: middle;
+                            font-weight: 900;
+                            color: #989898;
+                        }
+
+                        &:hover {
+                            &:before {
+                                color: #b30036;
+                            }
+                        }
+                    }
+
+                    .btn-editar {
+                        &:before {
+                            font-family: "Font Awesome 5 Free";
+                            content: "\f044";
+                            display: inline-block;
+                            padding-right: 3px;
+                            vertical-align: middle;
+                            font-weight: 900;
+                            color: #989898;
+                        }
+
+                        &:hover {
+                            &:before {
+                                color: @admin-cor-tema;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

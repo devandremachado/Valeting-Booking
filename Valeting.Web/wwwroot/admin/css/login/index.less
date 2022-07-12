@@ -1,0 +1,61 @@
+﻿@import "../../../shared/css/utility.less";
+
+main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Login {
+    a {
+        color: #007bff;
+        cursor: pointer;
+    }
+
+    .box-card {
+        width: 50%;
+        margin: 0 auto;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 12px;
+        box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+        margin: 0 auto;
+        padding: 20px 25px;
+
+        @media @media-mobile {
+            width: 100%
+        }
+
+        .cabecalho {
+            .titulo {
+                text-align: center;
+                color: @admin-cor-fonte-primario;
+                font-size: 32px;
+            }
+        }
+
+        .conteudo {
+            .box-acoes {
+                * {
+                    margin-bottom: 5px;
+                }
+
+                .entrar {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    align-content: center;
+                    align-items: center;
+                    justify-content: center;
+
+                    .btn-entrar {
+                        width: 200px;
+                        background-color: @admin-cor-tema;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}

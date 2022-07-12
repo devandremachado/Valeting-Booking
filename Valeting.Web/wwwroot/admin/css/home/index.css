@@ -1,0 +1,69 @@
+﻿#Home .tblBookings thead tr th {
+  white-space: pre-wrap;
+}
+#Home .tblBookings tbody td.approved {
+  background: #13d641;
+  color: #fff !important;
+}
+#Home .tblBookings tbody td .btn-ver {
+  padding: 0;
+}
+#Home .tblBookings tbody td .btn-ver:before {
+  margin-left: 5px;
+  font-family: "Font Awesome 5 Free";
+  content: "\f06e";
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 900;
+  color: #989898;
+  text-align: center;
+  background-color: transparent;
+  font-size: 12px;
+}
+#Home .tblBookings tbody td .btn-ver:hover:before {
+  color: #00b3b3;
+}
+#Home .tblBookings tbody td .btn-ver:focus {
+  box-shadow: none;
+}
+#Home .tblBookings tbody td.tabela-acoes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+#Home .tblBookings tbody td.tabela-acoes .btn-aprovar:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f560";
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+  font-weight: 900;
+  color: #989898;
+}
+#Home .tblBookings tbody td.tabela-acoes .btn-aprovar:hover:before {
+  color: #5cb300;
+}
+#Home .tblBookings tbody td.tabela-acoes .btn-reprovar:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f1f8";
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+  font-weight: 900;
+  color: #989898;
+}
+#Home .tblBookings tbody td.tabela-acoes .btn-reprovar:hover:before {
+  color: #b30036;
+}
+#Home .tblBookings tbody td.tabela-acoes .btn-editar:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f044";
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+  font-weight: 900;
+  color: #989898;
+}
+#Home .tblBookings tbody td.tabela-acoes .btn-editar:hover:before {
+  color: #00b3b3;
+}

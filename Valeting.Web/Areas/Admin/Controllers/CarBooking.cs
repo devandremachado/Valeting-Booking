@@ -1,13 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Valeting.Application.Services.Interfaces;
 
 namespace Valeting.Web.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class HomeController : Controller
+    public class CarBooking : Controller
     {
-
-        public ActionResult Index()
+        public IActionResult Index()
         {
             return View();
         }

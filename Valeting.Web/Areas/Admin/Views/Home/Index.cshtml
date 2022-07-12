@@ -1,1 +1,47 @@
-﻿
+﻿@{
+    ViewData["Title"] = "Home Admin";
+}
+
+<link href="~/admin/css/home/index.min.css" rel="stylesheet" />
+
+<div id="Home">
+    <div class="container">
+
+        <div>
+            <button type="button" id="btnCreateBooking" class="btn btn-espelho btn-primary">Create Booking</button>
+        </div>
+
+        <div class="tabela-datatable">
+            <div class="table-responsive">
+                <table id="tblBookings" class="table tblBookings" style="width: 100%;">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Booking Date</th>
+                            <th>Flexibility</th>
+                            <th>Vehicle Size</th>
+                            <th>Contact Number</th>
+                            <th>E-mail</th>
+                            <th class="acao" data-priority="-1">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+<script type="text/javascript" src="~/admin/js/home/index.js"></script>
+
+<script type="text/javascript">
+    var Booking_Actions = {
+        'GetAllBookings': "@Url.Action("GetAllBookings", "Home")",
+        'ApproveBooking': "@Url.Action("ApproveBooking", "Home")",
+        'RemoveBooking': "@Url.Action("RemoveBooking", "Home")",
+    };
+</script>
+}
