@@ -1,7 +1,7 @@
 # Valeting-Booking
 
 Todos:
- - Login (authorization)
- - Admin (Registir/edit booking)
- - Login (authorization)
+ - Admin => Registir/edit booking
+ - Admin => Login (authorization)
+ 
  - Handler Exceptions
